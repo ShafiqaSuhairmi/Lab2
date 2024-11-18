@@ -1,19 +1,15 @@
 def calculate_bmi(height, weight):
-    print("Height=", height)
-    print("Weight=", weight)
-
-    # Add code here to calculate BMI
+    # Calculate BMI
     bmi = weight / (height ** 2)  # Corrected the formula to use exponentiation
 
-    # If-else statement goes here
+    # Check BMI and return corresponding values
     if bmi < 18.5:
-        print("Underweight")
+        return -1  # Underweight
     elif 18.5 <= bmi <= 25.0:
-        print("Normal weight")
+        return 0  # Normal weight
     else:
-        print("Overweight")
+        return 1  # Overweight
 
-    # Add code here to display BMI
-    print("BMI=", bmi)
-
-calculate_bmi(weight=57, height=1.73)
+# Example usage
+result = calculate_bmi(height=1.73, weight=57)
+print("BMI category code:", result)
